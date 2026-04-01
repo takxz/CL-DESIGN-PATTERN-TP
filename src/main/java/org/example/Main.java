@@ -23,8 +23,8 @@ public class Main {
         salleServeur.addSensor(temperatureSensorA);
         salleServeur.addSensor(thermalAdaptateurB);
 
-        salleServeur.addNotificationSystem(NotificationFactory.createNotificationSystem("email"));
-        salleServeur.addNotificationSystem(NotificationFactory.createNotificationSystem("log"));
+        salleServeur.addNotificationSystem(NotificationFactory.createNotificationSystem("email", "test@gmail.com"));
+        salleServeur.addNotificationSystem(NotificationFactory.createNotificationSystem("log", "server_log.txt"));
 
         System.out.println("\n==== Simulation des détéction dans la salle serveur ====");
         cameraA.detectMovement();
@@ -46,7 +46,7 @@ public class Main {
         salleBureau.addSensor(temperatureSensorA2);
         salleBureau.addSensor(thermalAdaptateurB2);
 
-        salleBureau.addNotificationSystem(NotificationFactory.createNotificationSystem("discord"));
+        salleBureau.addNotificationSystem(NotificationFactory.createNotificationSystem("discord", "channel_id:123"));
 
         System.out.println("\n==== Simulation des détéction dans la salle bureau ====");
         cameraA2.detectMovement();
